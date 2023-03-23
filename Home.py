@@ -238,6 +238,7 @@ with col6:
                         fil_sort = fil.sort_values(by='Sales', ascending=False)[:10]
                         st.plotly_chart(bar_graph(fil_sort,"Tier",s_c1,s_c2))
         with c2:
+            st.subheading("Table Data")
             st.table(fil_sort)
 
 
