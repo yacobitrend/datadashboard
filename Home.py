@@ -257,7 +257,7 @@ with col7:
                         fil_df = merged_df.loc[(pd.to_datetime(daily_totals['Date']).dt.date >= sta_date) & 
                                   (pd.to_datetime(daily_totals['Date']).dt.date <= ea_date)]
                         ##### Group data by date and sum units and sale
-                        fil = fil_df.groupby('Tier')[columns].sum().reset_index()
+                        fil = fil_df.groupby(name)[columns].sum().reset_index()
                         fil_sort = fil.sort_values(by='Sales', ascending=False)[:10]
                         st.plotly_chart(bar_graph(fil_sort,name,s_c1,s_c2))
         with c4:
