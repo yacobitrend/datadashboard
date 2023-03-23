@@ -2,7 +2,7 @@ import streamlit as st
 
 st.set_page_config(layout='wide')
 
-st.title('Itrend Solution')
+#st.title('Itrend Solution')
 
 import streamlit as st
 import plotly.express as px
@@ -13,8 +13,8 @@ import plotly.graph_objects as go
 import pandas as pd
 import datetime
 
-##st.set_page_config(layout='wide')
-st.title('New UI-Marketplace Data')
+
+st.title('Marketplace Databoard')
 
 
 hide_table_row_index = """
