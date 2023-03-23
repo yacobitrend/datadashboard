@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.set_page_config()
+st.set_page_config(layout='wide')
 
 st.title('Itrend Solution')
 
