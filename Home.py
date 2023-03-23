@@ -14,7 +14,7 @@ import pandas as pd
 import datetime
 
 
-st.title('Marketplace Databoard')
+st.title('Marketplace Dashboard')
 
 
 hide_table_row_index = """
