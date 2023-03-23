@@ -250,9 +250,9 @@ with col7:
 
         name='Manager'
         c1,c2=st.columns((4,4))
-        name="Manager"
+        
 
-        with c1:
+        with c3:
                         ### Filter the daily_totals DataFrame based on the selected date range
                         fil_df = merged_df.loc[(pd.to_datetime(daily_totals['Date']).dt.date >= sta_date) & 
                                   (pd.to_datetime(daily_totals['Date']).dt.date <= ea_date)]
@@ -260,7 +260,7 @@ with col7:
                         fil = fil_df.groupby('Tier')[columns].sum().reset_index()
                         fil_sort = fil.sort_values(by='Sales', ascending=False)[:10]
                         st.plotly_chart(bar_graph(fil_sort,name,s_c1,s_c2))
-        with c2:
+        with c4:
             #st.subheading("Table Data")
             st.table(fil_sort)
 
