@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.set_page_config(layout="wide")
+st.set_page_config()
 
 st.title('Itrend Solution')
 
@@ -268,42 +268,41 @@ with col7:
 with col8:
 
         name='Team Name'
-
-    ### Filter the daily_totals DataFrame based on the selected date range
-        fil_df = merged_df.loc[(pd.to_datetime(daily_totals['Date']).dt.date >= sta_date) & 
-                                  (pd.to_datetime(daily_totals['Date']).dt.date <= ea_date)]
-
-     ##### Group data by date and sum units and sales
+        c5,c6=st.columns((4,4))
         
-        fil = fil_df.groupby(name)[columns].sum().reset_index()
 
-
-
-        fil_sort = fil.sort_values(by='Sales', ascending=False)[:10]
-
-        st.plotly_chart(bar_graph(fil_sort,name,s_c1,s_c2))
-
-        st.table(fil_sort)
-
+        with c5:
+                        ### Filter the daily_totals DataFrame based on the selected date range
+                        fil_df = merged_df.loc[(pd.to_datetime(daily_totals['Date']).dt.date >= sta_date) & 
+                                  (pd.to_datetime(daily_totals['Date']).dt.date <= ea_date)]
+                        ##### Group data by date and sum units and sale
+                        fil = fil_df.groupby(name)[columns].sum().reset_index()
+                        fil_sort = fil.sort_values(by='Sales', ascending=False)[:10]
+                        st.plotly_chart(bar_graph(fil_sort,name,s_c1,s_c2))
+        with c6:
+            #st.subheading("Table Data")
+            st.table(fil_sort)
+            
 with col9:
 
         name='Team Member'
 
-    ### Filter the daily_totals DataFrame based on the selected date range
-        fil_df = merged_df.loc[(pd.to_datetime(daily_totals['Date']).dt.date >= sta_date) & 
-                                  (pd.to_datetime(daily_totals['Date']).dt.date <= ea_date)]
-
-     ##### Group data by date and sum units and sales
+    c7,c8=st.columns((4,4))
         
-        fil = fil_df.groupby(name)[columns].sum().reset_index()
 
-
-
-        fil_sort = fil.sort_values(by='Sales', ascending=False)[:10]
-
-        st.plotly_chart(bar_graph(fil_sort,name,s_c1,s_c2))
-
-        st.table(fil_sort) 
+        with c7:
+                        ### Filter the daily_totals DataFrame based on the selected date range
+                        fil_df = merged_df.loc[(pd.to_datetime(daily_totals['Date']).dt.date >= sta_date) & 
+                                  (pd.to_datetime(daily_totals['Date']).dt.date <= ea_date)]
+                        ##### Group data by date and sum units and sale
+                        fil = fil_df.groupby(name)[columns].sum().reset_index()
+                        fil_sort = fil.sort_values(by='Sales', ascending=False)[:10]
+                        st.plotly_chart(bar_graph(fil_sort,name,s_c1,s_c2))
+                        
+        with c8:
+            
+            #st.subheading("Table Data")
+            st.table(fil_sort)
         
         
 
