@@ -33,7 +33,7 @@ hide_table_row_index = """
 st.markdown(hide_table_row_index, unsafe_allow_html=True)
 
 # Load data
-<<<<<<< HEAD
+
 data = pd.read_csv('pages/sales.csv',sep=',', index_col=False)
 
 #ASIN Details..
