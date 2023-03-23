@@ -287,7 +287,7 @@ with col9:
 
         name='Team Member'
 
-    c7,c8=st.columns((4,4))
+        c7,c8=st.columns((4,4))
         
 
         with c7:
