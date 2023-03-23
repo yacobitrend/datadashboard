@@ -249,7 +249,7 @@ with col6:
 with col7:
 
         name='Manager'
-        c1,c2=st.columns((4,4))
+        c3,c4=st.columns((4,4))
         
 
         with c3:
