@@ -33,10 +33,10 @@ hide_table_row_index = """
 st.markdown(hide_table_row_index, unsafe_allow_html=True)
 
 # Load data
-data = pd.read_csv('sales.csv',sep=',', index_col=False)
+data = pd.read_csv('datadashboard/sales.csv',sep=',', index_col=False)
 
 #ASIN Details..
-asin_data = pd.read_csv('ASIN-TIER.csv',sep=',', index_col=False)
+asin_data = pd.read_csv('datadashboard/ASIN-TIER.csv',sep=',', index_col=False)
 
 data['Sales'] = pd.to_numeric(data['Sales'], errors='coerce')
 
