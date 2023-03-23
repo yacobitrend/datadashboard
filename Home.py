@@ -37,7 +37,7 @@ asin_data = pd.read_csv('Pages/ASIN-TIER.csv',sep=',', index_col=False)
 data = pd.read_csv('Pages/Sales.csv',sep=',', index_col=False)
 
 #ASIN Details..
-asin_data = pd.read_csv('datadashboard/ASIN-TIER.csv',sep=',', index_col=False)
+asin_data = pd.read_csv('Pages/ASIN-TIER.csv',sep=',', index_col=False)
 
 
 data['Sales'] = pd.to_numeric(data['Sales'], errors='coerce')
