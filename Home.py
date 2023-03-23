@@ -120,7 +120,7 @@ fil_df = daily_totals.loc[(pd.to_datetime(daily_totals['Date']).dt.date >= start
 with col2:
     st.plotly_chart(bar_graph(fil_df,"Date",s_c1,s_c2))
 
-st.table(fil_df)
+##st.table(fil_df)
 
 
 
@@ -177,7 +177,7 @@ with col7:
     st.plotly_chart(bar_graph(fil_sort,"ASIN",s_c1,s_c2))
 
 
-st.table(fil_sort)
+##st.table(fil_sort)
 
 ##-------------------------------------
 
